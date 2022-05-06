@@ -27,6 +27,7 @@
             v-model="loginForm.password"
             placeholder="请输入密码"
             prefix-icon="el-icon-lock"
+            show-password
           ></el-input>
         </el-form-item>
         <!-- 按键 -->
@@ -52,7 +53,7 @@ export default {
       // 验证规则
       loginFormRules: {
         username: [
-          { required: true, message: '请输入登录密码', trigger: 'blur' },
+          { required: true, message: '请输入用户名', trigger: 'blur' },
           {
             min: 3,
             max: 10,

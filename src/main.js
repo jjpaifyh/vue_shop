@@ -6,10 +6,7 @@ import './assets/css/global.css'
 import '@/plugins/element.js'
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/fonts/iconfont'
-import axios from 'axios'
-
-Vue.prototype.$http = axios
-axios.defaults.baseURL = "http://127.0.0.1:8888/api/private/v1/"
+import './assets/js/axios_x'
 
 Vue.config.productionTip = false
 

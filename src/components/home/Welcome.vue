@@ -1,14 +1,15 @@
 <template>
   <div>
-    <el-button></el-button>
+      welcome
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+    name:"Welcome"
 }
 </script>
 
-<style lang='less' scoped>
+<style scoped>
+
 </style>
