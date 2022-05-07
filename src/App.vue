@@ -3,7 +3,9 @@
     <router-view></router-view>
   </div>
 </template>
-<script>
+
+
+<script >
 import Login from "@/views/Login/Login"
 export default {
   name:"app",
@@ -12,6 +14,7 @@ export default {
 
   }
 }
+
 </script>
 
 

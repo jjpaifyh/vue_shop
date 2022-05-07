@@ -6,7 +6,7 @@
       <img src="@/assets/img/Login/logo.png" alt="" />
       <span>商城后台管理系统</span>
     </div>
-    <el-button type="info" @click="logout">退出</el-button> 
+    <el-button type="danger" @click="logout">退出</el-button> 
   </el-header>
 
   <el-container>

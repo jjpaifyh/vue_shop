@@ -36,7 +36,7 @@
             </el-tooltip>
             <!-- 分配 -->
             <el-tooltip class="item" effect="dark" content="分配用户" placement="top" :open-delay="1000">
-                <el-button type="warning" icon="el-icon-setting" size="mini"></el-button>
+                <el-button type="warning" icon="el-icon-setting" size="mini" @click="assign_roles(scope.row)"></el-button>
             </el-tooltip>
         </template>
     </el-table-column>
@@ -56,11 +56,12 @@
 <dia-log :dialogVisible="dialogVisible"></dia-log>
 <!-- 修改用户的对话框 -->
 <dia-log-b :editDialogVisible="editDialogVisible" :editForm="editForm"></dia-log-b>
-
+<assign-roles-dia-log :istf_assign_roles="istf_assign_roles" :datas="datas" :relesList="relesList"></assign-roles-dia-log>
 </div>
 </template>
 
 <script>
+import AssignRolesDiaLog from "./AssignRolesDiaLog.vue"
 import DiaLog from "./DiaLog"
 import UserButton from "./UserButton.vue"
 import Breadcrumb from "./Breadcrumb.vue"
@@ -80,6 +81,8 @@ export default {
             total:0,
             dialogVisible:false,
             editDialogVisible:false,
+            istf_assign_roles:false,
+            relesList:[],
             // 添加用户表单数据
             addForm:{
                 username:'',
@@ -87,13 +90,15 @@ export default {
                 email:'',
                 mobile:''
             },
+            datas:{}
         }
     },
     components:{
       Breadcrumb,
       UserButton,
       DiaLog,
-      DiaLogB
+      DiaLogB,
+      AssignRolesDiaLog
     },
     created(){
         this.getUserList()
@@ -155,6 +160,16 @@ export default {
           this.$Message.success("删除成功")
           this.getUserList()
         
+        },
+        // 分配角色对话框
+        async assign_roles(data){
+            this.istf_assign_roles=true
+            this.datas=data
+            const {data:res}=await this.$http.get('roles')
+            if(res.meta.status!=200){return this.$Message.error('获取全部角色数据操作失败')}
+            this.relesList=res.data
+            console.log(this.relesList);
+
         }
 
     }

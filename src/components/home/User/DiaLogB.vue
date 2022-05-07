@@ -6,7 +6,7 @@
   :before-close="handleClose">
 
 <el-form ref="editFormRef" :model="editForm" :rules="editFormRyle" label-width="70px"  @close="deitDialogClosed">
-  <el-form-item label="活动名称">
+  <el-form-item label="用户名称">
     <el-input v-model="editForm.username" disabled></el-input>
   </el-form-item>
   <el-form-item label="邮箱" prop="email">

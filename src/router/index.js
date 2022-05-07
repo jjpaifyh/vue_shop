@@ -9,7 +9,9 @@ const Welcome = () =>
 const User = () =>
     import ('@/components/home/User/User')
 const RoleList = () =>
-    import ('@/components/home/role_list')
+    import ('@/components/home/power/role_list.vue')
+const Rights = () =>
+    import ("@/components/home/power/Rights.vue")
 
 
 Vue.use(VueRouter)
@@ -36,6 +38,10 @@ const routes = [{
         {
             path: '/_roles',
             component: RoleList
+        },
+        {
+            path: '/_rights',
+            component: Rights
         }
 
     ]
