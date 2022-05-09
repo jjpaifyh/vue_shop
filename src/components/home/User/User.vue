@@ -107,8 +107,6 @@ export default {
       // 获取用户列表
         async getUserList(){
            const res= await this.$http.get('users',{params:this.queryInfo})
-           console.log(res);
-           console.log(res.data.meta.status);
            if(res.data.meta.status!==200) {return console.log('获取用户列表失败');}
            this.userlist=res.data.data.users
            this.total=res.data.data.total

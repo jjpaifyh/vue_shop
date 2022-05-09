@@ -14,6 +14,8 @@ const Rights = () =>
     import ("@/components/home/power/Rights.vue")
 const Goods = () =>
     import ("@/components/home/Goods/Goods.vue")
+const Params = () =>
+    import ("@/components/home/Params/Params.vue")
 
 Vue.use(VueRouter)
 
@@ -47,6 +49,10 @@ const routes = [{
         {
             path: '/_categories',
             component: Goods
+        },
+        {
+            path: '/_params',
+            component: Params
         }
 
     ]
