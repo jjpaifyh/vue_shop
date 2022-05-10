@@ -9,14 +9,17 @@ const Welcome = () =>
 const User = () =>
     import ('@/components/home/User/User')
 const RoleList = () =>
-    import ('@/components/home/power/role_list.vue')
+    import ('@/components/home/power/RoleList/role_list.vue')
 const Rights = () =>
-    import ("@/components/home/power/Rights.vue")
+    import ("@/components/home/power/Rights/Rights.vue")
 const Goods = () =>
-    import ("@/components/home/Goods/Goods.vue")
+    import ("@/components/home/Goods/GoodsSort/Goods.vue")
 const Params = () =>
-    import ("@/components/home/Params/Params.vue")
-
+    import ("@/components/home/Goods/Params/Params.vue")
+const GoodsList = () =>
+    import ("@/components/home/Goods/GoodsList/goodsList.vue")
+const GoodsAdd = () =>
+    import ("@/components/home/Goods/GoodsList/goodsAdd.vue")
 Vue.use(VueRouter)
 
 
@@ -53,6 +56,14 @@ const routes = [{
         {
             path: '/_params',
             component: Params
+        },
+        {
+            path: '/_goods',
+            component: GoodsList
+        },
+        {
+            path: '/goodsadd',
+            component: GoodsAdd
         }
 
     ]

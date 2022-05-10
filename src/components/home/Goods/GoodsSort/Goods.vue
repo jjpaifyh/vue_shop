@@ -32,8 +32,10 @@
                 <el-tag type="warning" v-else>三级</el-tag>
             </template>
             <template slot="opt" slot-scope="scope">
+                <div class="w">
                 <el-button size="mini" icon="el-icon-edit" type="primary" @click="redact(scope.row)">编辑</el-button>
                 <el-button size="mini" icon="el-icon-delete" type="danger" @click="del(scope.row)">删除</el-button>
+                </div>
             </template>
             </zk-table>
             <!-- 分页 -->
@@ -162,5 +164,8 @@ export default {
 }
 .el-icon-error{
     color: rgb(243, 70, 70);
+}
+.w{
+    width: 200px;
 }
 </style>

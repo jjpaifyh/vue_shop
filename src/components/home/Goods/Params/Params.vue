@@ -50,7 +50,7 @@
           </el-table-column>
           <el-table-column type="index"></el-table-column>
           <el-table-column label="参数名称" prop="attr_name"></el-table-column>
-          <el-table-column label="操作">
+          <el-table-column label="操作" width="200px">
             <template slot-scope="scope">
               <el-button type="primary" size="mini" icon="el-icon-edit" @click="adds(scope.row)">编辑</el-button>
               <el-button type="danger" size="mini" icon="el-icon-detele" @click="del(scope.row)">删除</el-button>
