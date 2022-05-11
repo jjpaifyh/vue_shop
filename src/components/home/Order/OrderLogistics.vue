@@ -6,7 +6,7 @@
             :visible.sync="is_OrderLogistics"
             width="50%"
             :before-close="handleClose"
-            @close="closed">
+            @close="handleClose">
 
             <el-timeline :reverse="true">
                 <el-timeline-item
