@@ -20,10 +20,12 @@ const GoodsList = () =>
     import ("@/components/home/Goods/GoodsList/goodsList.vue")
 const GoodsAdd = () =>
     import ("@/components/home/Goods/GoodsList/goodsAdd.vue")
-Vue.use(VueRouter)
 const Order = () =>
     import ("@/components/home/Order/Order.vue")
+const Report = () =>
+    import ("@/components/home/Report/Report.vue")
 
+Vue.use(VueRouter)
 const routes = [{
     path: "",
     redirect: '/Login'
@@ -69,6 +71,10 @@ const routes = [{
         {
             path: '/_orders',
             component: Order
+        },
+        {
+            path: '/_reports',
+            component: Report
         }
 
     ]
