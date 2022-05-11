@@ -47,13 +47,11 @@
         :total="total" background="">
         </el-pagination>
     </el-card>
-    <goods-add ref="goods_add"></goods-add>
 
   </div>
 </template>
 
 <script>
-import GoodsAdd from './goodsAdd'
 export default {
   name: 'GoodsList',
   data() {
@@ -73,7 +71,6 @@ export default {
   //监控data中的数据变化
   watch: {},
   components:{
-      GoodsAdd
   },
   //方法集合
   methods: {
